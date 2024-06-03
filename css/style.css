@@ -1,0 +1,231 @@
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../public/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* filter: blur(10px); */
+    z-index: -1;
+    background-position: auto;
+    background-color: #d8e8f8;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    left: 15px;
+  }
+  
+  #left-panel:hover {
+    width: 300px;
+    /* Largura expandida ao passar o mouse */
+  }
+  
+  #left-panel {
+    width: 50px;
+    /* Largura inicial do painel */
+    height: 100vh;
+    background-color: rgba(253, 253, 253, 0.457);
+    /* Cor de fundo com transparÃªncia */
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Oculta o conteÃºdo que ultrapassa a altura do painel */
+    transition: width 0.3s;
+    /* Adiciona uma transiÃ§Ã£o suave Ã  largura */
+  }
+  
+  #right-panel {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .opcao {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    /* Oculta o texto que ultrapassa a largura do painel */
+    transition: background-color 0.3s;
+    /* Adiciona uma transiÃ§Ã£o suave na mudanÃ§a de cor */
+  }
+  
+  .opcao span {
+    transition: opacity 0.3s;
+    /* Adiciona uma transiÃ§Ã£o suave Ã  opacidade */
+  }
+  
+  /* Estilo quando o mouse estÃ¡ sobre a opÃ§Ã£o do menu */
+  .opcao:hover {
+    background-color: #f0f0f0;/* Cinza fraco */
+    border-top-left-radius: 15px; /* Borda arredondada no canto superior direito */
+    border-bottom-left-radius: 15px; /* Borda arredondada no canto inferior direito */
+  }
+  
+  .material-symbols-outlined {
+    margin-right: 10px;
+  }
+  
+  #left-panel:hover .opcao span {
+    opacity: 1;
+    /* Torna as palavras visÃ­veis durante o hover */
+  }
+  
+  .opcao img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .opcao-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+  
+  .linha1 {
+    display: inline-block;
+    margin-top: 20px;
+    margin-right: 195px;
+  }
+  
+  .linha2 {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .linha2,
+  .linha3 {
+    margin-bottom: 10px;
+  }
+  
+  .linha4 {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  #nome,
+  #numero_prontuario,
+  #data_prontuario,
+  #tipo_procedimento {
+    width: 300px;
+  }
+  
+  #numero_procedimento {
+    width: 210px;
+  }
+  
+  #sobrenome {
+    width: 300px;
+  }
+  
+  #endereco,
+  #cidade_estado,
+  #telefone {
+    width: 450px;
+  }
+  
+  #numero,
+  #data_inicio,
+  #data_fim,
+  #crm_medico {
+    width: 95px;
+  }
+  
+  #descricao_procedimento,
+  #nome_medico,
+  #assinatura_medico {
+    width: 500px;
+  }
+  
+  label {
+    display: inline-block;
+    width: 210px;
+    text-align: left;
+  }
+  
+  .menu-container {
+    display: flex;
+  }
+  
+  .menu {
+    width: 200px;
+    height: 100vh;
+  
+    color: #fff;
+    transition: width 0.3s;
+  }
+  
+  .menu:hover {
+    width: 250px;
+  }
+  
+  .menu-header {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    border-bottom: 1px solid #555;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+  }
+  
+  a:hover {
+    background-color: #555;
+  }
+  .sticky-note {
+    position: absolute;
+    background-color: #e1a4a8; /* Cor de fundo da nota adesiva */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    top: 100px; /* Ajuste a posiÃ§Ã£o conforme necessÃ¡rio */
+    left: 400px; /* Ajuste a posiÃ§Ã£o conforme necessÃ¡rio */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .sticky-note2 {
+    position: absolute;
+    background-color: #f7f5be; /* Cor de fundo da nota adesiva */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    height: 300px;
+    top: 100px; /* Ajuste a posiÃ§Ã£o conforme necessÃ¡rio */
+    left: 700px; /* Ajuste a posiÃ§Ã£o conforme necessÃ¡rio */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  .sticky-note p {
+    margin: 0; /* Remove margem padrÃ£o para melhorar a aparÃªncia */
+  }
+  
+  .sticky-note[contentEditable="true"] {
+    cursor: text;
+  }
